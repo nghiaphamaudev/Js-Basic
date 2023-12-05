@@ -42,17 +42,16 @@ const game = {
 
 // Task 1: Create 2 variables  to contain players of each team
 const [players1, players2] = game.players;
-console.log(players1, players2);
 
 //Task 2: Create one variable('gk') and one array ('fieldPlayers') with all the remaining 10 field players
 const [gk, ...fieldPlayers] = players1;
-console.log(gk, fieldPlayers);
 //Task 3: create an array ('allPlayer') contaning all players
-const allPlayers = [...players1, ...players2];
+const [allPlayers] = [...players1, ...players2];
 console.log(allPlayers);
 // Task 4; create playersFinal
-const playersFinal = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+const playersFinal = [...players1, 'Thiago', 'Kiminch', 'TonyKross'];
 console.log(playersFinal);
+
 // Task 5:
 const {
   odds: { team1, x: draw, team2 },
@@ -66,13 +65,10 @@ console.log(team1, draw, team2);
 //được ghi tổng cộng (số tên cầu thủ được ghi bàn);
 //tức là có bao nhiê tên đc truyền vào thì cso bấy nhiêu bàn thắng dcd ghi
 
-const printGoals = (...namePlayers) => {
-  console.log(namePlayers);
-  console.log(`${namePlayers.length} goals were scored`);
+const printGoals = (...players) => {
+  console.log(`${players.length} were scored`);
 };
-
 printGoals(...game.scored);
-
 //Task 7:
 
-team1 < team2 && console.log('Team 1 is more likely to win');
+team1 < team2 && console.log('Team 1 is likey win!!');

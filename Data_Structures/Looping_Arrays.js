@@ -57,18 +57,28 @@ const restaurant = {
     console.log(otherIng);
   },
 };
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-restaurant.numGuests = 0;
-const guests = restaurant.numGuests || 10;
-console.log(guests);
+for (const items of menu) {
+  console.log(items);
+}
 
-//Nullish: null and undefined không bao gồm (0 và "");
-const guestCorrect = restaurant.numGuests && 19;
-console.log(guestCorrect);
-// Kiểm tra giá trị bên trái của nó có phải là null or undifined không,
-// nếu có thì return về giá trị thứ hai
-// nếu không return về giá trị đầu tiên
+// Lấy vị trí của nó
 
-/// Toán hạng OR ||
-//Toán hạng AND &&
-//Toán hạng Nullish ??
+for (const items of menu.entries()) {
+  console.log(items);
+}
+
+//Cách viết menu  #
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1} : ${el}`);
+}
+
+//Cah viest #
+////Boqri vì mỗi items là 1 mảng riêng mà 1 menu ko thể bắt đầu bằng 0 đc nên +1
+// chỉ số 1 là vị trí index của mảng items có giá trị là món ăn
+for (const items of menu.entries()) {
+  console.log(`${items[0] + 1} : ${items[1]}`);
+  // console.log(`${items[0]}`);
+}
